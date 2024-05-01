@@ -3,7 +3,7 @@
 #define INCLUDE_TRAIN_H_
 
 class Train {
-private:
+ private:
     struct Cage {
         bool light; // состояние лампочки
         Cage* next;
@@ -15,7 +15,7 @@ private:
     int step;
     int length;
 
-public:
+ public:
     Train();
 
     void addCage(bool light); // добавить вагон с начальным состоянием лампочки

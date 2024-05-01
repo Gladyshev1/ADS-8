@@ -5,7 +5,8 @@ Train::Train() {
     first = new Cage;
     first->prev = nullptr;
     countOp = 0;
-
+    step = 0;
+    length = 0;
 }
 
 void Train::addCage(bool light) {
@@ -13,8 +14,7 @@ void Train::addCage(bool light) {
         first->next = first;
         first->prev = first;
         first->light = light;
-    }
-    else {
+    } else {
         Cage* mystruct = first->next;
         first->next = new Cage;
         first->next->prev = first;
@@ -49,7 +49,6 @@ int Train::getLength() {
             return (length + 1);
         }
     }
-
 }
 
 int Train::getOpCount() {
